@@ -10,6 +10,7 @@
 //seleziono il livello di difficoltà
 const play = document.getElementById('play');
 const containerGrid = document.getElementById('container');
+let spanPoints = document.getElementById('points');
 const numBomb = 16;
 let arrayBomb = [];
 play.addEventListener('click', function () {
@@ -67,12 +68,16 @@ play.addEventListener('click', function () {
         square.addEventListener('click', function () {
             if(square.classList.contains('hidebomb')) {
                 square.classList.add('bomb');
-                alert('Hai perso, hai totalizzato il punteggio di:' + ' ' + (points) + ' punti');
+                let allBombs = document.querySelectorAll('.hidebomb');
+                for (let z=0; z< allBombs.length; z++){
+                    allBombs[z].classList.add('bomb');
+                }
                 }
                 else
                 {
                 square.classList.add('clicked');
-                points = points + 1; 
+                points = points + 1;
+                spanPoints.append(points);
                 }
         })
     }

@@ -104,3 +104,11 @@ footer {
 footer h2{
     margin-left: 10px;
 }
+
+.risultato {
+  text-align: center;
+}
+
+#points{
+  color: blueviolet;
+}

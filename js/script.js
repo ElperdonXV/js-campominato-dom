@@ -10,6 +10,8 @@
 //seleziono il livello di difficoltà
 const play = document.getElementById('play');
 const containerGrid = document.getElementById('container');
+const numBomb = 16;
+let arrayBomb = [];
 play.addEventListener('click', function () {
     container.innerHTML = '';
 
@@ -47,3 +49,15 @@ play.addEventListener('click', function () {
 
 
 
+//   let numberRand = Math.floor(Math.random() * (numberSquare - 1 + 1) + 1);
+//   //controllo se il numero generato è dentro arrayBomb
+//   //se non lo è allora lo inserisco nell'array delle bombe
+//   //altrimenti ne genero uno nuovo
+
+//   while (arrayBomb.includes(numberRand)) { //controllo se e incluso in array, e ne genero uno nuovo finche e presente
+//     numberRand = Math.floor(Math.random() * (numberSquare - 1 + 1) + 1);
+//   }
+
+//   //qui ci arrivo solo se ho generato un numero nuovo
+//   arrayBomb.push(numberRand); //lo pusho nell'array
+//   // console.log(arrayBomb);

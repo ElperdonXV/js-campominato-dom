@@ -53,7 +53,7 @@ play.addEventListener('click', function () {
         arrayBomb.push(numberRand); //lo pusho nell'array
     }
     console.log(arrayBomb); //checkarray
-
+    let points = parseInt(0); //inizializzo il contatore del punteggio 
     for (let i = 0; i < numberSquare; i++) {
         const square = document.createElement('div');
         square.classList.add('square');
@@ -63,6 +63,8 @@ play.addEventListener('click', function () {
         containerGrid.append(square);
         square.addEventListener('click', function () {
             this.classList.add('clicked');
+            points = points + 1; 
+            console.log(points); //check dei points 
         })
     }
 })

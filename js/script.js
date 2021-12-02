@@ -11,6 +11,7 @@
 const play = document.getElementById('play');
 const containerGrid = document.getElementById('container');
 let spanPoints = document.getElementById('points');
+const risultato = document.querySelector('.risultato');
 const numBomb = 16;
 let arrayBomb = [];
 play.addEventListener('click', function () {
@@ -73,6 +74,9 @@ play.addEventListener('click', function () {
                 for (let z=0; z< allBombs.length; z++){
                     allBombs[z].classList.add('bomb');
                 }
+                risultato.append(`
+                Hai perso! 
+                `);
                 }
                 else
                 {

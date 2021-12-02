@@ -1,0 +1,102 @@
+:root {
+  --square-size: 10;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 100%;
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1{
+    display: inline-block;
+    vertical-align: bottom;
+    line-height: 50px;
+}
+
+header img{
+    margin-left: 10px;
+    height: 50px;
+}
+
+
+body{
+    background-color:aquamarine;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+}
+
+.container{
+    width: 500px;
+    height: 500px;
+    margin: 10vh auto;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid black;
+}
+
+.square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% / var(--square-size)); /*possiamo cambiare numero square con variabile*/
+  height: calc(100% / var(--square-size));
+  cursor: pointer;
+  border: 2px solid black;
+}
+
+.dx{
+    margin-right: 20px;
+}
+/*
+.square--even.clicked {
+  background: #2ec4b6;
+}
+*/
+/*
+.square--odd.clicked {
+  background: #e71d36;
+}
+*/
+.square > span {
+  /*display: none;
+*/  color: black;
+}
+/*
+.square.clicked > span {
+  display: block;
+}
+*/
+
+.clicked{
+  background-color: blue;
+}
+
+footer {
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+footer h2{
+    margin-left: 10px;
+}

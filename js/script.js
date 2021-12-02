@@ -61,10 +61,19 @@ play.addEventListener('click', function () {
         square.style.height = `calc(100% / ${row})`;
         square.append(i + 1);
         containerGrid.append(square);
+        if (arrayBomb.includes(parseInt(square.innerText))) {
+            square.classList.add('hidebomb');
+        }
         square.addEventListener('click', function () {
-            this.classList.add('clicked');
-            points = points + 1; 
-            console.log(points); //check dei points 
+            if(square.classList.contains = 'hidebomb') {
+                square.classList.add = ('bomb');
+               console.log('Hai perso');
+                }
+                else
+                {
+                square.classList.add('clicked');
+                points = points + 1; 
+                }
         })
     }
 })

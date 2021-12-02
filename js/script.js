@@ -65,6 +65,7 @@ play.addEventListener('click', function () {
         if (arrayBomb.includes(parseInt(square.innerText))) {
             square.classList.add('hidebomb');
         }
+        
         square.addEventListener('click', function () {
             if(square.classList.contains('hidebomb')) {
                 square.classList.add('bomb');
@@ -77,7 +78,7 @@ play.addEventListener('click', function () {
                 {
                 square.classList.add('clicked');
                 points = points + 1;
-                spanPoints.append(points);
+                spanPoints.innerHTML = points;
                 }
         })
     }

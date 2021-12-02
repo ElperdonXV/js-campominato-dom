@@ -65,9 +65,9 @@ play.addEventListener('click', function () {
             square.classList.add('hidebomb');
         }
         square.addEventListener('click', function () {
-            if(square.classList.contains = 'hidebomb') {
-                square.classList.add = ('bomb');
-               console.log('Hai perso');
+            if(square.classList.contains('hidebomb')) {
+                square.classList.add('bomb');
+                alert('Hai perso, hai totalizzato il punteggio di:' + ' ' + (points) + ' punti');
                 }
                 else
                 {

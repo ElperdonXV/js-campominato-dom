@@ -21,19 +21,39 @@ play.addEventListener('click', function () {
     let row=0;
 
     if (value == 'easy') {
+        arrayBomb = [];
         row = 10;
         col = 10; 
     }
     else if (value == 'normal') {
+        arrayBomb = [];
         row = 9;
         col = 9;
     }
     else if (value == 'hard') {
+        arrayBomb = [];
         row = 7;
         col = 7;
     }
 
     let numberSquare = row * col;
+
+    for(let x=0; x<numBomb; x++){
+        let numberRand = Math.floor(Math.random() * (numberSquare - 1 + 1) + 1);
+
+        //controllo se il numero generato è dentro arrayBomb
+        //se non lo è allora lo inserisco nell'array delle bombe
+        //altrimenti ne genero uno nuovo
+
+        while (arrayBomb.includes(numberRand)) { //controllo se e incluso in array, e ne genero uno nuovo finche e presente
+        numberRand = Math.floor(Math.random() * (numberSquare - 1 + 1) + 1);
+      }
+
+      //qui ci arrivo solo se ho generato un numero nuovo
+        arrayBomb.push(numberRand); //lo pusho nell'array
+    }
+    console.log(arrayBomb); //checkarray
+
     for (let i = 0; i < numberSquare; i++) {
         const square = document.createElement('div');
         square.classList.add('square');
@@ -48,16 +68,9 @@ play.addEventListener('click', function () {
 })
 
 
+   
 
-//   let numberRand = Math.floor(Math.random() * (numberSquare - 1 + 1) + 1);
-//   //controllo se il numero generato è dentro arrayBomb
-//   //se non lo è allora lo inserisco nell'array delle bombe
-//   //altrimenti ne genero uno nuovo
 
-//   while (arrayBomb.includes(numberRand)) { //controllo se e incluso in array, e ne genero uno nuovo finche e presente
-//     numberRand = Math.floor(Math.random() * (numberSquare - 1 + 1) + 1);
-//   }
 
-//   //qui ci arrivo solo se ho generato un numero nuovo
-//   arrayBomb.push(numberRand); //lo pusho nell'array
-//   // console.log(arrayBomb);
+
+
